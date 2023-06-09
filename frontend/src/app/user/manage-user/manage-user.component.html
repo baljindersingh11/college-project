@@ -1,0 +1,35 @@
+<div class="ftco-blocks-cover-1">
+    <div class="ftco-cover-1 overlay innerpage" style="background-image: url('../../assets/images/hero_2.jpg')">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h1>Manage User</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="ftco-blocks-cover-1">
+<div class="card-body" >
+    <div class="col-lg-12 mb-12"  style="margin: auto" >
+    <table class='table'>
+        <tr class="table-dark">
+            <th>name</th>
+            <th>email</th>
+            <th>contact</th>
+        </tr>
+
+        <tr *ngFor=" let us of userarray ">
+            <td> {{ us.name}}</td>
+            <td> {{ us.email}}</td>
+            <td> {{ us.contact}}</td>
+        </tr>
+        
+    </table>
+      
+    </div>
+   
+  </div>
+ 
+</div>
+

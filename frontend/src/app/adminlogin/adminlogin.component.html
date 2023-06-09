@@ -1,0 +1,36 @@
+
+<div class="containerr" style="background-image: url('../../assets/images/admin-login.jpg');height: 1200px; background-size: 100% 100%">
+ 
+  <div class="row " >
+      <div class="col-lg-4 mb-5"  style="margin: auto" >
+        <form [formGroup]="AdminloginForm" >
+              <br><br><br><br><br><br><br>
+        
+              <legend style="color:azure; text-align: center">ADMIN LOGIN
+          <div class="form-group ">
+            <div class="col-md-6 mx-auto">
+              <input type="email" class="form-control" placeholder="Admin Email address" formControlName="email">
+            </div>
+          </div>
+  
+          <div class="form-group ">
+                  <div class="col-md-6 mx-auto">
+                    <input type="password" class="form-control" placeholder="Admin password " formControlName="password">
+                  </div>
+           </div>
+  
+          <div class="form-group row" style="text-align:center">
+            <div class="col-md-6 mx-auto">
+              <button class="btn btn-primary" (click)="onclick()">Login</button>
+          </div>
+          </div>
+  
+              </legend>
+        </form>
+        
+      </div>
+     
+    </div>
+   
+  </div>
+  

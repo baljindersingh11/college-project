@@ -1,0 +1,48 @@
+<div class="containerr img-fluid " style="background-image: url('../../assets/images/login.jpg'); height: 1200px; background-size: 100% 100% ; ">
+
+  <div class="ftco-blocks-cover-1">
+      <div class="ftco-cover-1  innerpage" >
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 text-center">
+              <div  style="padding-top: 270px; text-decoration-line: underline ">
+                  <h1 >User Login</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class=" mt-5">
+      <div class="col-lg-6 mb-5" style="margin: auto ">
+        <form [formGroup]="AdminloginForm">
+          <div class="form-group " >
+              <div class="col-md-4 mx-auto" >
+                <input type="email" class="form-control" placeholder="User Email address" formControlName="email">
+              </div>
+            </div>
+    
+            <div class="form-group ">
+              <div class="col-md-4 mx-auto" >
+                <input type="password" class="form-control" placeholder="User password " formControlName="password">
+              </div>
+            </div>
+    
+            <div class="form-group " style="text-align:center; padding-top: 40px">
+              <div class="col-md-6 mx-auto">
+                <button class="btn btn-primary" (click)="onclick()">Login</button> <br> <br>
+    
+               <div>
+                  <a class =" text-white"href="/layout/add-user"><h5 >New User?</h5> </a>
+               </div>
+              </div>
+            </div>
+    
+        </form>
+    
+      </div>
+    
+    </div>
+    
+</div>

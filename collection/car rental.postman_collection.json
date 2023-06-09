@@ -1,0 +1,713 @@
+{
+	"info": {
+		"_postman_id": "854d5de2-bf3d-4522-a861-d939d9d2b409",
+		"name": "car rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25437023"
+	},
+	"item": [
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "addbrand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand_name",
+									"value": "Maruti",
+									"type": "text"
+								},
+								{
+									"key": "brand_logo",
+									"type": "file",
+									"src": "/C:/Users/Bali/Pictures/IMG_0524.jpg"
+								},
+								{
+									"key": "status",
+									"value": "free",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/addbrand",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"addbrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallbrand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand_name",
+									"value": "audi",
+									"type": "text"
+								},
+								{
+									"key": "brand_logo",
+									"type": "file",
+									"src": "/C:/Users/Bali/Pictures/IMG_5688.MOV"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/getallbrand",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"getallbrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getsinglebrand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "64008ca541aaec83da252751",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/getsinglebrand",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"getsinglebrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand_id",
+									"value": "64008ca541aaec83da252751",
+									"type": "text"
+								},
+								{
+									"key": "brand_name ",
+									"value": "Mercedes",
+									"type": "text"
+								},
+								{
+									"key": "brand_logo",
+									"type": "file",
+									"src": "/C:/Users/Bali/Pictures/IMG_2372.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/updatebrand",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"updatebrand"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY4MDg2MjU1M30.AUfU9bTAwFMHEGCmSmp1wP3Pe-lzN2VLDX0eEUVV08I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adduser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY4MDUyNDYzM30.qfHySY9GptHLoPnTXgkoUeCuGCWMCOQDUpxlqtqlhPI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ravneetravneet",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Ravneetrajan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Ravneet123",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "9888615177",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/adduser",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"adduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getalluser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY4MTEzOTk1MH0.AMyZFyf3Wky8ossbsRKmLt0-DhI2ULAJSyHJmvNxDW4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/getall",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getsingleuser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "641c412d80b688df5ac76148",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/getsingle",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"getsingle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "addcar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "car_names",
+									"value": "C65",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "powerfull and comfortable",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Bali/Pictures/mcafee refrence number.PNG"
+								},
+								{
+									"key": "hourly_rent",
+									"value": "1500",
+									"type": "text"
+								},
+								{
+									"key": "brand_id",
+									"value": "64008ca541aaec83da252751",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "original_price",
+									"value": "2000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/addcar",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"addcar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallcars",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:2508/admin/getallcar",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"getallcar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getsinglecar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "6411b6e2d8bfb3d41ac774f7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/getsinglecar",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"getsinglecar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatecar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_id",
+									"value": "6411b6e2d8bfb3d41ac774f7",
+									"type": "text"
+								},
+								{
+									"key": "original_price",
+									"value": "800",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Bali/Pictures/IMG_5688.MOV"
+								},
+								{
+									"key": "status",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "brand_id",
+									"value": "6411b2b5c414ed78fd7ff6cd",
+									"type": "text"
+								},
+								{
+									"key": "car_names",
+									"value": "baleno",
+									"type": "text"
+								},
+								{
+									"key": "hourly_rent",
+									"value": "300",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/updatecar",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"updatecar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cartempdel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_id",
+									"value": "641562ddde2415226a05fe8f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/cartempdel",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"cartempdel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservation",
+			"item": [
+				{
+					"name": "addreservation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "641aec45619491f0d81d2d7d",
+									"type": "text"
+								},
+								{
+									"key": "brand_id",
+									"value": "6411b2b5c414ed78fd7ff6cd",
+									"type": "text"
+								},
+								{
+									"key": "car_id",
+									"value": "6411b6e2d8bfb3d41ac774f7",
+									"type": "text"
+								},
+								{
+									"key": "reservation_date",
+									"value": "402",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "reservation_status",
+									"value": "approved",
+									"type": "text"
+								},
+								{
+									"key": "pickup_description",
+									"value": "will be picked from the given destination",
+									"type": "text"
+								},
+								{
+									"key": "pickup_date",
+									"value": "2000-03-22",
+									"type": "text"
+								},
+								{
+									"key": "pickup_time",
+									"value": "12:00",
+									"type": "text"
+								},
+								{
+									"key": "hours_booked",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "price_per_hour",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "total_price",
+									"value": "40000",
+									"type": "text"
+								},
+								{
+									"key": "damage_cost",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2508/admin/addreservation",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"addreservation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallreservation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDAwOGFmMDFjZTU1YjkwMjY5NGY5YzEiLCJuYW1lIjoiQmFsaSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlclR5cGUiOjEsImlhdCI6MTY3Nzc1NzE4M30.OqtUwLu8Pj9uBejzsqOawQTf06t5hfJWL84l70l_Kzc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:2508/admin/getallreservations",
+							"host": [
+								"localhost"
+							],
+							"port": "2508",
+							"path": [
+								"admin",
+								"getallreservations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

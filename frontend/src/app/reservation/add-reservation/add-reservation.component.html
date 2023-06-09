@@ -1,0 +1,70 @@
+<div class="ftco-blocks-cover-1">
+  <div class="ftco-cover-1 overlay innerpage" style="background-image: url('../../assets/images/hero_2.jpg')">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h1>Make Reservation</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row"  >
+    <div class="col-lg-10 mb-5 mt-5"  style="margin: auto" >
+      <form [formGroup] = "addreservation" (submit)="submit()" >
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="">Brand</label>
+            <select style="text-align: center" class="form-control" placeholder="Brand" formControlName="brand_id" (change)="getallcar($event)">
+              <option *ngFor=" let brand of brandarray" [value]="brand._id">{{ brand.brand_name }}</option>
+            </select>
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="">Car</label>
+            <select style="text-align: center" class="form-control" placeholder="" formControlName="car_id" (change)="changecar($event)">
+              <option *ngFor=" let car of cararray" [value]="car._id">{{ car.car_names }}</option>
+            </select>
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="">Reservation Date</label>
+            <input type="date" style="text-align: center" class="form-control" placeholder="reservation_date" formControlName="reservation_date">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="">Start Time</label>
+            <input type="time" style="text-align: center"class="form-control" placeholder=" start_time" formControlName="start_time">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="">Pickup Description</label>
+            <input type="text" style="text-align: center" class="form-control" placeholder=" pickup_description " formControlName="pickup_description">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="">Pickup Date</label>
+            <input type="date" style="text-align: center" class="form-control" placeholder=" pickup_date " formControlName="pickup_date">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="">Hours Booked</label>
+            <input type="number" style="text-align: center" class="form-control" placeholder=" hours_booked " formControlName="hours_booked" min="0">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="">Price Per Hour</label>
+            <input type="number" style="text-align: center" class="form-control" placeholder=" price_per_hour " formControlName="price_per_hour">
+          </div>
+          <div class="col-md-12 form-group">
+            <label for="">Damage Cost</label>
+            <input type="number" style="text-align: center" class="form-control" placeholder=" damage_cost " formControlName="damage_cost">
+          </div>
+         </div>
+
+        <div class="row" style="text-align:center">
+          <div class="col-md-6 form-group mx-auto">
+            <button type="submit" class="btn btn-primary" >Add</button>
+        </div>
+        </div>
+      </form>
+      
+    </div>
+   
+  </div>
+ 
+

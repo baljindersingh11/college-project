@@ -1,0 +1,154 @@
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div class="site-wrap" id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <header class="site-navbar site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-3 ">
+            <div class="site-logo ">
+              <a>
+                <h1 class="display-5 text-white">EliteCars</h1>
+              </a>
+            </div>
+          </div>
+          <div class="col-9  text-right">
+            <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span
+                  class="icon-menu h3 text-white"></span></a>
+            </span>
+            <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto" *ngIf="isadminlogin">
+                <li><a routerLink="/layout/home" class="nav-link">HOME</a></li>
+
+                <!-- <li>
+                  <a class="nav-link" data-toggle="dropdown">Brand manager</a>
+                  <div id="services">
+                    <ul class="dropdown-menu">
+
+                      <li><a routerLink="/layout/add-brand" class="nav-link"> Add Brand</a></li>
+                      <li><a routerLink="/layout/manage-brand" class="nav-link">Manage Brand</a></li>
+
+                    </ul>
+                  </div>
+
+                </li> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    BRAND MANAGER
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/layout/add-brand">ADD BRAND </a>
+                    <a class="dropdown-item" href="/layout/manage-brand">MANAGE BRAND</a>
+                  </div>
+                </li>
+
+                <!-- <li>
+                  <a class="nav-link" data-toggle="dropdown">Car manager</a>
+                  <div id="services">
+                    <ul class="dropdown-menu">
+
+                      <li><a routerLink="/layout/add-car" class="nav-link"> Add Car</a></li>
+                      <li><a routerLink="/layout/manage-car" class="nav-link">Manage Car</a></li>
+
+                    </ul>
+                  </div>
+
+                </li> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    CAR MANAGER
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/layout/add-car">ADD CAR </a>
+                    <a class="dropdown-item" href="/layout/manage-car">MANAGER CAR</a>
+                  </div>
+                </li>
+
+                <!-- <li><a class="nav-link" data-toggle="dropdown">Reservation manager</a>
+                  <div id="services">
+                    <ul class="dropdown-menu">
+                      <li><a routerLink="/layout/manage-reservation" class="nav-link">Manage reservation</a></li>
+                    </ul>
+                  </div>
+                </li> -->
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    RESERVATION MANAGER
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                    <a class="dropdown-item" href="/layout/manage-reservation">MANAGER RESERVATION</a>
+                  </div>
+                </li>
+
+                <li>
+                  <a routerLink="/layout/manage-user" class="nav-link">USERS</a>
+                </li>
+                <li>
+                  <a class="nav-link" (click)='logout()'>LOGOUT</a>
+                </li>
+              </ul>
+              <ul class="site-menu main-menu js-clone-nav ml-auto" *ngIf="isuserlogin"> 
+                <li><a routerLink="/layout/home" class="nav-link">Home</a></li>
+                <li><a href="/layout/about" class="nav-link">About</a></li>
+                <li><a href="/layout/services" class="nav-link">Brand</a>
+                <li><a href="/layout/user-reservations" class="nav-link">My Reservations</a>
+                <li>
+                  <a class="nav-link"  (click)='userlogout()'>logout</a>
+                </li>
+              </ul>
+              <ul class="site-menu main-menu js-clone-nav ml-auto" *ngIf="(!isadminlogin) && (!isuserlogin)">
+                <li><a routerLink="/layout/home" class="nav-link">HOME</a></li>
+                <li><a href="/layout/about" class="nav-link">ABOUT</a></li>
+                <li><a href="/layout/services" class="nav-link">BRANDS</a>
+                  <!-- <li> -->
+                  <!-- <a class="nav-link" data-toggle="dropdown">USER</a>
+                  <div id="services">
+                    <ul class="dropdown-menu">
+                      <li><a href="/layout/adminlogin"> ADMIN LOGIN</a></li>
+                      <li><a href="/layout/userlogin">USER LOGIN</a></li>
+                    </ul>
+                  </div> -->
+                  <!-- <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      User
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="/layout/adminlogin">Admin Login</a>
+                      <a class="dropdown-item" href="/layout/userlogin">User Login</a>
+                    
+                    </div>
+                  </div> -->
+                  <!-- </li> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    USER
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/layout/adminlogin">Admin Login</a>
+                    <a class="dropdown-item" href="/layout/userlogin">User Login</a>
+                  </div>
+                </li>
+                <li><a href="/layout/add-user" class="nav-link">REGISTER</a>
+
+              </ul>
+            </nav>
+          </div>
+
+
+        </div>
+      </div>
+
+    </header>

@@ -1,0 +1,35 @@
+<div class="ftco-blocks-cover-1">
+    <div class="ftco-cover-1 overlay innerpage" style="background-image: url('../../assets/images/hero_2.jpg')">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h1>Cars</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-section bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor=" let car of cararray">
+          <div class="post-entry-1 h-100">
+            <a>
+              <img [src]="getimage(car.image)" alt="Image"
+               class="img-fluid">
+            </a>
+
+            <div class="post-entry-1-contents border">
+              <h2><a>{{ car.car_names}}</a></h2>
+              <span class="meta d-inline-block mb-3"><a href="#">{{ car.brand_id.brand_name}}    </a></span>
+              <p>{{ car.description}}</p>
+              <p><strong>Hourly Rates</strong>: {{ car.hourly_rent | currency:'INR' }}</p>
+              <p><strong>Original Price</strong>: {{ car.original_price | currency:'INR' }}</p>
+              <a [routerLink]="['/layout/add-reservation',car._id]" class="btn btn-dark text-white">Reserve</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
