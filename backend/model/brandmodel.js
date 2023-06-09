@@ -9,4 +9,5 @@ const brandSchema = mongoose.Schema({
     'isBlocked' : {type:Boolean,default:false}   
 })
 
+//schema
 module.exports = new mongoose.model('brand',brandSchema)
